@@ -6,3 +6,4 @@
 ### Samples Apps
 
 1. [BotFramework-WebChat Control](https://xteddie.github.io/omnichannel-demos/omnichannel-chat-sdk/botframework-webchat-control/index.html)
+1. [React-Chat-Widget Control](https://xteddie.github.io/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/index.html)
