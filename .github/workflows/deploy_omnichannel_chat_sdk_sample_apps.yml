@@ -102,4 +102,4 @@ jobs:
         with:
           branch: gh-pages
           folder: botframework-webchat-control
-          target-folder: omnichannel-chat-sdk
+          target-folder: omnichannel-chat-sdk/botframework-webchat-control
