@@ -25,7 +25,9 @@ jobs:
 
       - name: Install NPM Packages
         run: |
+          cd botframework-webchat-control
           npm ci
+
       - name: Update @microsoft/omnichannel-chat-sdk
         run: |
           npm uninstall @microsoft/omnichannel-chat-sdk
