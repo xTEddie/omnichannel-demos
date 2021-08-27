@@ -29,6 +29,7 @@ env:
   CI: false
 
 jobs:
+
   botframework-webchat-control:
     runs-on: ubuntu-latest
 
@@ -77,12 +78,19 @@ jobs:
         run: |
           npm run build
 
+      # - name: Configure Deployment
+      #   run: |
+      #     mkdir -p omnichannel-chat-sdk
+      #     mv botframework-webchat-control tmp
+      #     cp -r tmp/build .
+      #     mv build omnichannel-chat-sdk/botframework-webchat-control
+      #     ls
+
       - name: Configure Deployment
         run: |
-          mkdir -p omnichannel-chat-sdk
           mv botframework-webchat-control tmp
           cp -r tmp/build .
-          mv build omnichannel-chat-sdk/botframework-webchat-control
+          mv build botframework-webchat-control
           ls
 
       - name: Clean Up
@@ -93,4 +101,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: .
+          folder: botframework-webchat-control
+          target-folder: omnichannel-chat-sdk
