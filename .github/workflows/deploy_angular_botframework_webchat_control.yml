@@ -25,7 +25,7 @@ env:
   orgUrl: ${{ github.event.inputs.orgUrl }}
   widgetId: ${{ github.event.inputs.widgetId }}
   email: ${{ github.event.inputs.email }}
-  deployUrl: omnichannel-chat-sdk/angular-botframework-webchat-control
+  deployUrl: omnichannel-chat-sdk/angular-botframework-webchat-control/
   CI: false
 
 
