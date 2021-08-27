@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checking out for ${{ github.ref }}
+        uses: actions/checkout@v2
+
       - name: Use Node.js
         uses: actions/setup-node@v1.4.4
         with:
