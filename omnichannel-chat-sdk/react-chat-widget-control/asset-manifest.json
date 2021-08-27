@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/css/main.02bfd8e3.chunk.css",
-    "main.js": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/js/main.0982ac09.chunk.js",
-    "main.js.map": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/js/main.0982ac09.chunk.js.map",
+    "main.js": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/js/main.953fd341.chunk.js",
+    "main.js.map": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/js/main.953fd341.chunk.js.map",
     "runtime-main.js": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/js/runtime-main.c9494606.js",
     "runtime-main.js.map": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/js/runtime-main.c9494606.js.map",
     "static/css/2.98b667b4.chunk.css": "/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control/static/css/2.98b667b4.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.98b667b4.chunk.css",
     "static/js/2.ab33868b.chunk.js",
     "static/css/main.02bfd8e3.chunk.css",
-    "static/js/main.0982ac09.chunk.js"
+    "static/js/main.953fd341.chunk.js"
   ]
 }
