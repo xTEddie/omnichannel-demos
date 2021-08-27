@@ -1,4 +1,4 @@
-name: Deploy BotFramework-WebChat-Control Sample App
+name: Deploy BotFramework-WebChat Control Sample App
 
 on:
   workflow_dispatch:

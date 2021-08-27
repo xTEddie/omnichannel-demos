@@ -1,4 +1,4 @@
-name: Deploy BotFramework-Chat-Control Sample App
+name: Deploy React-Chat-Widget Control Sample App
 
 on:
   workflow_dispatch:
@@ -25,12 +25,12 @@ env:
   orgUrl: ${{ github.event.inputs.orgUrl }}
   widgetId: ${{ github.event.inputs.widgetId }}
   email: ${{ github.event.inputs.email }}
-  rootUrl: https://blog.edwardtran.me/omnichannel-demos/omnichannel-chat-sdk/botframework-webchat-control
+  rootUrl: https://blog.edwardtran.me/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control
   CI: false
 
 jobs:
 
-  botframework-webchat-control:
+  react-chat-widget-control:
     runs-on: ubuntu-latest
 
     steps:
@@ -42,23 +42,23 @@ jobs:
         with:
           node-version: 12.X
 
-      - name: Download botframework-webchat-control
+      - name: Download react-chat-widget-control
         run: |
-          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk/tree/main/samples/botframework-webchat-control"
+          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk/tree/main/samples/react-chat-widget-control"
 
       - name: Install NPM Packages
-        working-directory: botframework-webchat-control
+        working-directory: react-chat-widget-control
         run: |
           npm ci
 
       - name: Update @microsoft/omnichannel-chat-sdk
-        working-directory: botframework-webchat-control
+        working-directory: react-chat-widget-control
         run: |
           npm uninstall @microsoft/omnichannel-chat-sdk
           npm install @microsoft/omnichannel-chat-sdk@latest --save-dev
 
       - name: Configure Environment
-        working-directory: botframework-webchat-control
+        working-directory: react-chat-widget-control
         run: |
           echo "# Chat Widget Config" > .env
           echo "REACT_APP_orgId='$orgId'" >> .env
@@ -69,20 +69,20 @@ jobs:
           echo "REACT_APP_email='$email'" >> .env
 
       - name: Set App Server Root
-        working-directory: botframework-webchat-control
+        working-directory: react-chat-widget-control
         run: |
           echo "$(cat package.json | jq --arg url ${rootUrl} '. + {homepage: $url}')" > package.json
 
       - name: Build App
-        working-directory: botframework-webchat-control
+        working-directory: react-chat-widget-control
         run: |
           npm run build
 
       - name: Configure Deployment
         run: |
-          mv botframework-webchat-control tmp
+          mv react-chat-widget-control tmp
           cp -r tmp/build .
-          mv build botframework-webchat-control
+          mv build react-chat-widget-control
           ls
 
       - name: Clean Up
@@ -93,5 +93,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: botframework-webchat-control
-          target-folder: omnichannel-chat-sdk/botframework-webchat-control
+          folder: react-chat-widget-control
+          target-folder: omnichannel-chat-sdk/react-chat-widget-control
