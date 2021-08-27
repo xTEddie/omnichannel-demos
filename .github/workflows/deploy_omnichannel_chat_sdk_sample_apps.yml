@@ -1,13 +1,30 @@
 name: Deploy Omnichannel Chat SDK Sample Apps
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      orgId:
+        description: 'Organization Id'
+        required: false
+        default: 'd367c413-e0b9-408b-ae1c-382499b369ae'
+      orgUrl:
+        description: 'Organization URL'
+        require: false
+        default: 'https://omnichannel-crm.omnichannelengagementhub.com'
+      widgetId:
+        description: 'Widget Id'
+        require: false
+        default: 'https://omnichannel-crm.omnichannelengagementhub.com'
+      email:
+        description: 'Email'
+        require: false
+        default: 'foo@bar.com'
 
 env:
-  orgId: d367c413-e0b9-408b-ae1c-382499b369ae
-  orgUrl: https://omnichannel-crm.omnichannelengagementhub.com
-  widgetId: 3a352b95-5d67-4e47-af28-eca029b03928
-  email: foo@bar.com
+  orgId: ${{ github.event.inputs.orgId }}
+  orgUrl: ${{ github.event.inputs.orgUrl }}
+  widgetId: ${{ github.event.inputs.widgetId }}
+  email: ${{ github.event.inputs.email }}
   rootUrl: https://blog.edwardtran.me/omnichannel-demos/omnichannel-chat-sdk/botframework-webchat-control
   CI: false
 
