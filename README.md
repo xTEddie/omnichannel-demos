@@ -2,6 +2,7 @@
 
 ## Omnichannel Chat SDK
 [![npm version](https://badge.fury.io/js/%40microsoft%2Fomnichannel-chat-sdk.svg)](https://badge.fury.io/js/%40microsoft%2Fomnichannel-chat-sdk)
+![npm](https://img.shields.io/npm/dm/@microsoft/omnichannel-chat-sdk)
 
 ### Samples Apps
 
