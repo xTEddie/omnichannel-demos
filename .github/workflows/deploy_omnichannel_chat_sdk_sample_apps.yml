@@ -1,6 +1,7 @@
 name: Deploy Omnichannel Chat SDK Sample Apps
 
-on: workflow_dispatch
+on:
+  workflow_dispatch
 
 env:
   ordId: d367c413-e0b9-408b-ae1c-382499b369ae
@@ -75,4 +76,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: omnichannel-chat-sdk
+          folder: .
