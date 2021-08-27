@@ -55,7 +55,7 @@ jobs:
         working-directory: botframework-webchat-control
         run: |
           npm uninstall @microsoft/omnichannel-chat-sdk
-          npm install @microsoft/omnichannel-chat-sdk@latest --save-dev
+          npm install @microsoft/omnichannel-chat-sdk@latest --save
 
       - name: Configure Environment
         working-directory: botframework-webchat-control

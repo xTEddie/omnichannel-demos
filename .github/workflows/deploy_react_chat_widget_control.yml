@@ -49,13 +49,13 @@ jobs:
       - name: Install NPM Packages
         working-directory: react-chat-widget-control
         run: |
-          npm ci
+          yarn install
 
       - name: Update @microsoft/omnichannel-chat-sdk
         working-directory: react-chat-widget-control
         run: |
-          npm uninstall @microsoft/omnichannel-chat-sdk
-          npm install @microsoft/omnichannel-chat-sdk@latest --save-dev
+          yarn remove @microsoft/omnichannel-chat-sdk
+          yarn add @microsoft/omnichannel-chat-sdk@latest
 
       - name: Configure Environment
         working-directory: react-chat-widget-control
@@ -76,7 +76,7 @@ jobs:
       - name: Build App
         working-directory: react-chat-widget-control
         run: |
-          npm run build
+          yarn build
 
       - name: Configure Deployment
         run: |
