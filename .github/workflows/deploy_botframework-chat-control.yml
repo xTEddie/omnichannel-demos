@@ -1,4 +1,4 @@
-name: Deploy Omnichannel Chat SDK Sample Apps
+name: Deploy BotFramework-Chat-Control Sample App
 
 on:
   workflow_dispatch:
@@ -77,14 +77,6 @@ jobs:
         working-directory: botframework-webchat-control
         run: |
           npm run build
-
-      # - name: Configure Deployment
-      #   run: |
-      #     mkdir -p omnichannel-chat-sdk
-      #     mv botframework-webchat-control tmp
-      #     cp -r tmp/build .
-      #     mv build omnichannel-chat-sdk/botframework-webchat-control
-      #     ls
 
       - name: Configure Deployment
         run: |
