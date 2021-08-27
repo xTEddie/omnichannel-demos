@@ -8,6 +8,7 @@ env:
   widgetId: 3a352b95-5d67-4e47-af28-eca029b03928
   email: foo@bar.com
   rootUrl: https://blog.edwardtran.me/omnichannel-demos/omnichannel-chat-sdk/botframework-webchat-control
+  CI: false
 
 jobs:
   botframework-webchat-control:
@@ -55,7 +56,7 @@ jobs:
         run: |
           npm run build
 
-      - name: Deploy App
+      - name: Configure Deployment
         run: |
           mkdir -p omnichannel-chat-sdk
           mv botframework-webchat-control tmp
@@ -66,3 +67,9 @@ jobs:
       - name: Clean Up
         run: |
           rm -rf tmp
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: omnichannel-chat-sdk
