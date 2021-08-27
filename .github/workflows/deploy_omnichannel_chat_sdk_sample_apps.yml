@@ -24,17 +24,21 @@ jobs:
           npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk/tree/main/samples/botframework-webchat-control"
 
       - name: Install NPM Packages
+        working_directory: botframework-webchat-control
         run: |
-          cd botframework-webchat-control
           npm ci
 
       - name: Update @microsoft/omnichannel-chat-sdk
+        working_directory: botframework-webchat-control
         run: |
+          cd botframework-webchat-control
           npm uninstall @microsoft/omnichannel-chat-sdk
           npm install @microsoft/omnichannel-chat-sdk@latest --save-dev
 
       - name: Configure Environment
+        working_directory: botframework-webchat-control
         run: |
+          cd botframework-webchat-control
           echo "# Chat Widget Config" > .env
           echo "REACT_APP_orgId='$orgId'" >> .env
           echo "REACT_APP_orgUrl='$orgUrl'" >> .env
@@ -44,13 +48,25 @@ jobs:
           echo "REACT_APP_email='$email'" >> .env
 
       - name: Set App Server Root
+        working_directory: botframework-webchat-control
         run: |
+          cd botframework-webchat-control
           echo "$(cat package.json | jq --arg url ${rootUrl} '. + {homepage: $url}')" > package.json
 
       - name: Build App
+        working_directory: botframework-webchat-control
         run: |
           npm run build
 
+      - name: Deploy App
+        working_directory: botframework-webchat-control
+        run: |
+          mkdir -p omnichannel-chat-sdk
+          mv botframework-webchat-control tmp
+          cp -r tmp/build .
+          mv build omnichannel-chat-sdk/botframework-webchat-control
+          ls
+
       - name: Clean Up
         run: |
-          rm -rf botframework-webchat-control
+          rm -rf tmp
