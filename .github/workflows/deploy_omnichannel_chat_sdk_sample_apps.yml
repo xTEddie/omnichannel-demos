@@ -1,0 +1,54 @@
+name: Deploy Omnichannel Chat SDK Sample Apps
+
+on: workflow_dispatch
+
+env:
+  ordId: d367c413-e0b9-408b-ae1c-382499b369ae
+  orgUrl: https://omnichannel-crm.omnichannelengagementhub.com
+  widgetId: 3a352b95-5d67-4e47-af28-eca029b03928
+  email: foo@bar.com
+  rootUrl: https://blog.edwardtran.me/omnichannel-demos/omnichannel-chat-sdk/botframework-webchat-control
+
+jobs:
+  botframework-webchat-control:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Use Node.js
+        uses: actions/setup-node@v1.4.4
+        with:
+          node-version: 12.X
+
+      - name: Download botframework-webchat-control
+        run: |
+          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk/tree/main/samples/botframework-webchat-control"
+
+      - name: Install NPM Packages
+        run: |
+          npm ci
+      - name: Update @microsoft/omnichannel-chat-sdk
+        run: |
+          npm uninstall @microsoft/omnichannel-chat-sdk
+          npm install @microsoft/omnichannel-chat-sdk@latest --save-dev
+
+      - name: Configure Environment
+        run: |
+          echo "# Chat Widget Config" > .env
+          echo "REACT_APP_orgId='$orgId'" >> .env
+          echo "REACT_APP_orgUrl='$orgUrl'" >> .env
+          echo "REACT_APP_widgetId='$widgetId'" >> .env
+          echo "" >> .env
+          echo "# Transcript Config" >> .env
+          echo "REACT_APP_email='$email'" >> .env
+
+      - name: Set App Server Root
+        run: |
+          echo "$(cat package.json | jq --arg url ${rootUrl} '. + {homepage: $url}')" > package.json
+
+      - name: Build App
+        run: |
+          npm run build
+
+      - name: Clean Up
+        run: |
+          rm -rf botframework-webchat-control
