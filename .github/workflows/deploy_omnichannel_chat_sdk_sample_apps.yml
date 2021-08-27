@@ -31,14 +31,12 @@ jobs:
       - name: Update @microsoft/omnichannel-chat-sdk
         working-directory: botframework-webchat-control
         run: |
-          cd botframework-webchat-control
           npm uninstall @microsoft/omnichannel-chat-sdk
           npm install @microsoft/omnichannel-chat-sdk@latest --save-dev
 
       - name: Configure Environment
         working-directory: botframework-webchat-control
         run: |
-          cd botframework-webchat-control
           echo "# Chat Widget Config" > .env
           echo "REACT_APP_orgId='$orgId'" >> .env
           echo "REACT_APP_orgUrl='$orgUrl'" >> .env
@@ -50,7 +48,6 @@ jobs:
       - name: Set App Server Root
         working-directory: botframework-webchat-control
         run: |
-          cd botframework-webchat-control
           echo "$(cat package.json | jq --arg url ${rootUrl} '. + {homepage: $url}')" > package.json
 
       - name: Build App
@@ -59,7 +56,6 @@ jobs:
           npm run build
 
       - name: Deploy App
-        working-directory: botframework-webchat-control
         run: |
           mkdir -p omnichannel-chat-sdk
           mv botframework-webchat-control tmp
