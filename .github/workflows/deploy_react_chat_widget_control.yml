@@ -25,7 +25,7 @@ env:
   orgUrl: ${{ github.event.inputs.orgUrl }}
   widgetId: ${{ github.event.inputs.widgetId }}
   email: ${{ github.event.inputs.email }}
-  rootUrl: https://blog.edwardtran.me/omnichannel-demos/omnichannel-chat-sdk/react-chat-widget-control
+  rootUrl: https://demo.edwardtran.me/omnichannel-chat-sdk/react-chat-widget-control
   CI: false
 
 jobs:
