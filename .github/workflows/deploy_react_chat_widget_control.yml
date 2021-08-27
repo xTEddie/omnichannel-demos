@@ -14,7 +14,7 @@ on:
       widgetId:
         description: 'Widget Id'
         require: false
-        default: 'https://omnichannel-crm.omnichannelengagementhub.com'
+        default: '3a352b95-5d67-4e47-af28-eca029b03928'
       email:
         description: 'Email'
         require: false
