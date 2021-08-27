@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 env:
-  ordId: d367c413-e0b9-408b-ae1c-382499b369ae
+  orgId: d367c413-e0b9-408b-ae1c-382499b369ae
   orgUrl: https://omnichannel-crm.omnichannelengagementhub.com
   widgetId: 3a352b95-5d67-4e47-af28-eca029b03928
   email: foo@bar.com
