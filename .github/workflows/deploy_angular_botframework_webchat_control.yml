@@ -77,8 +77,7 @@ jobs:
       - name: Configure Deployment
         run: |
           mv angular-botframework-webchat-control tmp
-          cp -r tmp/dist .
-          mv dist angular-botframework-webchat-control
+          cp -r tmp/dist/angular-botframework-webchat-control .
 
       - name: Clean Up
         run: |
