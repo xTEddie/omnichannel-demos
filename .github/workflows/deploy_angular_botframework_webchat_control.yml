@@ -63,8 +63,8 @@ jobs:
           echo "export const environment = {" > environment.prod.ts
           echo "  production: true," >> environment.prod.ts
           echo "  omnichannelConfig: {" >> environment.prod.ts
-          echo "    orgId: '$orgId'" >> environment.prod.ts
-          echo "    orgUrl: '$orgUrl'" >> environment.prod.ts
+          echo "    orgId: '$orgId'," >> environment.prod.ts
+          echo "    orgUrl: '$orgUrl'," >> environment.prod.ts
           echo "    widgetId: '$widgetId'" >> environment.prod.ts
           echo "  }" >> environment.prod.ts
           echo "};" >> environment.prod.ts
