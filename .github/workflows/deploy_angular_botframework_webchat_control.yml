@@ -1,0 +1,92 @@
+name: Deploy Angular BotFramework-WebChat Control Experimental App
+
+on:
+  workflow_dispatch:
+    inputs:
+      orgId:
+        description: 'Organization Id'
+        required: false
+        default: 'd367c413-e0b9-408b-ae1c-382499b369ae'
+      orgUrl:
+        description: 'Organization URL'
+        require: false
+        default: 'https://omnichannel-crm.omnichannelengagementhub.com'
+      widgetId:
+        description: 'Widget Id'
+        require: false
+        default: '3a352b95-5d67-4e47-af28-eca029b03928'
+      email:
+        description: 'Email'
+        require: false
+        default: 'foo@bar.com'
+
+env:
+  orgId: ${{ github.event.inputs.orgId }}
+  orgUrl: ${{ github.event.inputs.orgUrl }}
+  widgetId: ${{ github.event.inputs.widgetId }}
+  email: ${{ github.event.inputs.email }}
+  deployUrl: omnichannel-chat-sdk/angular-botframework-webchat-control
+  CI: false
+
+
+jobs:
+  botframework-webchat-control:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking out for ${{ github.ref }}
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1.4.4
+        with:
+          node-version: 12.X
+
+      - name: Download angular-botframework-webchat-control
+        run: |
+          npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-experiments/tree/main/omnichannel-chat-sdk/angular-botframework-webchat-control"
+
+      - name: Install NPM Packages
+        working-directory: angular-botframework-webchat-control
+        run: |
+          npm ci
+
+      - name: Update @microsoft/omnichannel-chat-sdk
+        working-directory: angular-botframework-webchat-control
+        run: |
+          npm uninstall @microsoft/omnichannel-chat-sdk
+          npm install @microsoft/omnichannel-chat-sdk@latest --save
+
+      - name: Configure Environment
+        working-directory: angular-botframework-webchat-control/src/environments
+        run: |
+          echo "export const environment = {" > environment.prod.ts
+          echo "  production: true," >> environment.prod.ts
+          echo "  omnichannelConfig: {" >> environment.prod.ts
+          echo "    orgId: '$orgId'" >> environment.prod.ts
+          echo "    orgId: '$orgId'" >> environment.prod.ts
+          echo "    orgId: '$orgId'" >> environment.prod.ts
+          echo "  }" >> environment.prod.ts
+          echo "};" >> environment.prod.ts
+
+      - name: Build App
+        working-directory: angular-botframework-webchat-control
+        run: |
+          npm run build -- --deploy-url ${deployUrl}
+
+      - name: Configure Deployment
+        run: |
+          mv angular-botframework-webchat-control tmp
+          cp -r tmp/dist .
+          mv dist angular-botframework-webchat-control
+
+      - name: Clean Up
+        run: |
+          rm -rf tmp
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: angular-botframework-webchat-control
+          target-folder: omnichannel-chat-sdk/angular-botframework-webchat-control
