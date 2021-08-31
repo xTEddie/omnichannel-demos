@@ -9,6 +9,8 @@
 1. [BotFramework-WebChat Control](https://demo.edwardtran.me/omnichannel-chat-sdk/botframework-webchat-control/index.html)
 1. [React-Chat-Widget Control](https://demo.edwardtran.me/omnichannel-chat-sdk/react-chat-widget-control/index.html)
 
+### Expo Snack Apps
+1. [Gifted Chat React Native Control](https://snack.expo.dev/@xteddie/omnichannelchatsdkgiftedchatsampleapp)
 
 ### Experimentals
 1. [Angular BotFramework-WebChat Control](https://demo.edwardtran.me/omnichannel-chat-sdk/angular-botframework-webchat-control/index.html)
