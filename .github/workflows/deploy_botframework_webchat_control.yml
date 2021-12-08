@@ -43,7 +43,7 @@ jobs:
 
       - name: Download botframework-webchat-control
         run: |
-          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk/tree/main/samples/botframework-webchat-control"
+          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk-samples/tree/main/botframework-webchat-control"
 
       - name: Install NPM Packages
         working-directory: botframework-webchat-control
