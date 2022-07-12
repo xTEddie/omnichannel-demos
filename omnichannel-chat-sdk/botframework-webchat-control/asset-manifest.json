@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/omnichannel-chat-sdk/botframework-webchat-control/static/css/main.ab7dfe48.chunk.css",
-    "main.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/main.172eeced.chunk.js",
-    "main.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/main.172eeced.chunk.js.map",
-    "runtime-main.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/runtime-main.013474c0.js",
-    "runtime-main.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/runtime-main.013474c0.js.map",
+    "main.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/main.0e56e86d.chunk.js",
+    "main.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/main.0e56e86d.chunk.js.map",
+    "runtime-main.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/runtime-main.3bfcc0b7.js",
+    "runtime-main.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/runtime-main.3bfcc0b7.js.map",
     "static/css/2.9b4cfae6.chunk.css": "/omnichannel-chat-sdk/botframework-webchat-control/static/css/2.9b4cfae6.chunk.css",
-    "static/js/2.35ee895f.chunk.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.35ee895f.chunk.js",
-    "static/js/2.35ee895f.chunk.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.35ee895f.chunk.js.map",
-    "static/js/3.e3b0e243.chunk.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/3.e3b0e243.chunk.js",
-    "static/js/3.e3b0e243.chunk.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/3.e3b0e243.chunk.js.map",
+    "static/js/2.8fc33f55.chunk.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.8fc33f55.chunk.js",
+    "static/js/2.8fc33f55.chunk.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.8fc33f55.chunk.js.map",
+    "static/js/3.2d03fd31.chunk.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/3.2d03fd31.chunk.js",
+    "static/js/3.2d03fd31.chunk.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/3.2d03fd31.chunk.js.map",
     "index.html": "/omnichannel-chat-sdk/botframework-webchat-control/index.html",
     "static/css/2.9b4cfae6.chunk.css.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/css/2.9b4cfae6.chunk.css.map",
     "static/css/main.ab7dfe48.chunk.css.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/css/main.ab7dfe48.chunk.css.map",
-    "static/js/2.35ee895f.chunk.js.LICENSE.txt": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.35ee895f.chunk.js.LICENSE.txt"
+    "static/js/2.8fc33f55.chunk.js.LICENSE.txt": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.8fc33f55.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.013474c0.js",
+    "static/js/runtime-main.3bfcc0b7.js",
     "static/css/2.9b4cfae6.chunk.css",
-    "static/js/2.35ee895f.chunk.js",
+    "static/js/2.8fc33f55.chunk.js",
     "static/css/main.ab7dfe48.chunk.css",
-    "static/js/main.172eeced.chunk.js"
+    "static/js/main.0e56e86d.chunk.js"
   ]
 }
