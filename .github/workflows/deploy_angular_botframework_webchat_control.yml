@@ -44,7 +44,7 @@ jobs:
 
       - name: Download angular-botframework-webchat-control
         run: |
-          npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-experiments/tree/main/omnichannel-chat-sdk/angular-botframework-webchat-control"
+          npx github-files-fetcher --url="https://github.com/xTEddie/omnichannel-experiments/tree/fix-angular/omnichannel-chat-sdk/angular-botframework-webchat-control"
 
       - name: Install NPM Packages
         working-directory: angular-botframework-webchat-control
