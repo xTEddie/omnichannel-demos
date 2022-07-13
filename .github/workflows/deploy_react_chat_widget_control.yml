@@ -43,7 +43,7 @@ jobs:
 
       - name: Download react-chat-widget-control
         run: |
-          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk/tree/main/samples/react-chat-widget-control"
+          npx github-files-fetcher --url="https://github.com/microsoft/omnichannel-chat-sdk-samples/tree/main/react-chat-widget-control"
 
       - name: Install NPM Packages
         working-directory: react-chat-widget-control
