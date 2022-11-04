@@ -6,19 +6,19 @@
     "runtime-main.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/runtime-main.3bfcc0b7.js",
     "runtime-main.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/runtime-main.3bfcc0b7.js.map",
     "static/css/2.9b4cfae6.chunk.css": "/omnichannel-chat-sdk/botframework-webchat-control/static/css/2.9b4cfae6.chunk.css",
-    "static/js/2.7aba6446.chunk.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.7aba6446.chunk.js",
-    "static/js/2.7aba6446.chunk.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.7aba6446.chunk.js.map",
+    "static/js/2.31412bd8.chunk.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.31412bd8.chunk.js",
+    "static/js/2.31412bd8.chunk.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.31412bd8.chunk.js.map",
     "static/js/3.2d03fd31.chunk.js": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/3.2d03fd31.chunk.js",
     "static/js/3.2d03fd31.chunk.js.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/3.2d03fd31.chunk.js.map",
     "index.html": "/omnichannel-chat-sdk/botframework-webchat-control/index.html",
     "static/css/2.9b4cfae6.chunk.css.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/css/2.9b4cfae6.chunk.css.map",
     "static/css/main.ab7dfe48.chunk.css.map": "/omnichannel-chat-sdk/botframework-webchat-control/static/css/main.ab7dfe48.chunk.css.map",
-    "static/js/2.7aba6446.chunk.js.LICENSE.txt": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.7aba6446.chunk.js.LICENSE.txt"
+    "static/js/2.31412bd8.chunk.js.LICENSE.txt": "/omnichannel-chat-sdk/botframework-webchat-control/static/js/2.31412bd8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3bfcc0b7.js",
     "static/css/2.9b4cfae6.chunk.css",
-    "static/js/2.7aba6446.chunk.js",
+    "static/js/2.31412bd8.chunk.js",
     "static/css/main.ab7dfe48.chunk.css",
     "static/js/main.2b4e654d.chunk.js"
   ]
